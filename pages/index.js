@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import Header from '../components/header'
-import Link from 'next/link'
+import Banner from '../components/Banner'
+import Cats from '../components/Cats'
 import MainHeader from '../components/MainHeader'
+import Products from '../components/Products'
 
-export default function Home() {
+export default function Home({ categories }) {
+  // console.log(urlFor(categories.cats[0].catImage).url())
   return (
     <div>
       <Head>
@@ -11,6 +13,16 @@ export default function Home() {
       </Head>
 
       <MainHeader />
+      <Banner />
+      <Cats />
+      <Products />
     </div>
   )
 }
+
+// export async function getServerSideProps(context) {
+//   console.log(context.req);
+//   return {
+//     props: {}
+//   }
+// }

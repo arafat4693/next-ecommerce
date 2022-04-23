@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .btn__style {
+    @apply text-white rounded-lg text-2xl font-normal hover:bg-gray-600 py-3;
+  }
+}
+
 :root {
   --green: #27ae60;
   --orange: #f39c12;
@@ -52,4 +58,21 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6.5rem;
+}
+
+.userProfile {
+  margin-top: 4rem;
+  animation: fadeUp .2s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  100% {
+    margin-top: 2.5rem;
+  }
+}
+
+.banner {
+  background: url('/images/home-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
