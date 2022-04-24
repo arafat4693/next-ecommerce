@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import SecTitle from './SecTitle'
 import Image from 'next/image'
 import { urlFor } from '../sanity'
@@ -8,7 +8,7 @@ import { EyeIcon } from '@heroicons/react/solid'
 export default function Products() {
     const [latestProducts, setLatestProducts] = useState([])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         async function getLatest() {
             const fetchLatest = await fetch('/api/products?latest=true').then(res => res.json())
             setLatestProducts(fetchLatest)

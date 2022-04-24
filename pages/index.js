@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Banner from '../components/Banner'
 import Cats from '../components/Cats'
+import MainFooter from '../components/MainFooter'
 import MainHeader from '../components/MainHeader'
 import Products from '../components/Products'
 
@@ -16,6 +17,7 @@ export default function Home({ categories }) {
       <Banner />
       <Cats />
       <Products />
+      <MainFooter />
     </div>
   )
 }

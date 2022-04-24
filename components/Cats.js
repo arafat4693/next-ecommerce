@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import SecTitle from './SecTitle'
 import Image from 'next/image'
 import { urlFor } from '../sanity'
@@ -7,7 +7,7 @@ import Link from 'next/link'
 export default function Cats() {
     const [categories, setCategories] = useState([])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         async function getCats() {
             const cats = await fetch('api/getCat').then(res => res.json())
             setCategories(cats)
